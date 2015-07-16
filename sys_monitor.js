@@ -54,6 +54,10 @@ var os = require('./lib/os'),
 
 
         fs.exists(data_path, function (exist) {
+            if(!exist) {
+                return
+            }
+
             var file = fs.readFileSync(data_path),
                 data = JSON.parse(file);
 

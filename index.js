@@ -22,6 +22,6 @@ app.get('/', function (req, res, next) {
 });
 
 
-app.listen(3333, function () {
-    console.log('listen');
+app.listen(config.PORT, function () {
+    console.log('listening at port ' + config.PORT);
 });
